@@ -37,7 +37,6 @@ form {
     flex-direction: column;
     width: 50%;
     padding: 20px;
-    border-radius: 10px;
 }
 
 .login-section {
@@ -46,8 +45,6 @@ form {
     background: -webkit-linear-gradient(145deg, rgba(100,0,255,1) 0%, rgba(52,0,133,1) 42%, rgba(0,0,0,1) 100%);
     background: linear-gradient(145deg, rgba(100,0,255,1) 0%, rgba(52,0,133,1) 42%, rgba(0,0,0,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6400ff",endColorstr="#000000",GradientType=1);
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
 }
 
 .register-section {
@@ -128,17 +125,12 @@ input[type="submit"]:hover {
     .login-section, .register-section {
         width: 100%;
         height: 50%;
-        border-radius: 0;
     }
 
     .login-section {
-        border-bottom-left-radius: 100px;
-        border-bottom-right-radius: 100px;
-    }
-
-    .login-section {
-        border-bottom-left-radius: 0;
-        border-top-left-radius: 0;
+        border: none;
+        border-bottom-left-radius: 100%;
+        border-bottom-right-radius: 100%;
     }
 
     .register-section {
