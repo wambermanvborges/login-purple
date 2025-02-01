@@ -75,6 +75,7 @@ input:focus {
 }
 
 input[type="submit"] {
+    background-color: transparent;
     transition: 500ms all;
     width: 80%;
     padding: 10px;
