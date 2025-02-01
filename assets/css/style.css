@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'JetBrains Mono', monospace;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 80%;
+    max-width: 800px;
+    height: 500px; /* Altura aumentada */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    overflow: hidden; /* Para garantir que as bordas arredondadas funcionem */
+}
+
+.login-section, .register-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.login-section {
+    background: rgb(100,0,255);
+    background: -moz-linear-gradient(145deg, rgba(100,0,255,1) 0%, rgba(52,0,133,1) 42%, rgba(0,0,0,1) 100%);
+    background: -webkit-linear-gradient(145deg, rgba(100,0,255,1) 0%, rgba(52,0,133,1) 42%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(145deg, rgba(100,0,255,1) 0%, rgba(52,0,133,1) 42%, rgba(0,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6400ff",endColorstr="#000000",GradientType=1);
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.register-section {
+    background-color: #fff;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.login-section h1, .register-section h1 {
+    color: #fff;
+}
+
+.register-section h1 {
+    color: #6400ff;
+}
+
+input[type="text"], input[type="password"] {
+    color: #6400ff;
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #6400ff;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: none;
+}
+
+input[type="submit"] {
+    transition: 500ms all;
+    width: 80%;
+    padding: 10px;
+    cursor: pointer;
+    border: 2px solid #6400ff;
+    font-size: 20px;
+    border-radius: 10px;
+    color: #6400ff
+}
+
+input[type="submit"]:hover {
+    background-color: #6400ff;
+    color: white;
+}
+
+.login-section a {
+    transition: 500ms all;
+    text-align: center;
+    width: 80%;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+    border: 2px solid white;
+    font-size: 15px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.login-section a:hover {
+    background-color: white;
+    color: #6400ff;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+
+    body {
+        height: auto;
+    }
+
+    form {
+        width: 100%;
+        height: 100vh; 
+        flex-direction: column;
+        border-radius: 0;
+    }
+
+    .login-section, .register-section {
+        width: 100%;
+        height: 50%;
+        border-radius: 0;
+    }
+
+    .login-section {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+    }
+
+    .register-section {
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    input[type="text"], input[type="password"], input[type="submit"], .login-section a {
+        width: 90%;
+    }
+}
